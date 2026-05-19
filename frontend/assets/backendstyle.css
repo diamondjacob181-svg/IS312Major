@@ -1,0 +1,626 @@
+* --- Global Reset & Font --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body {
+    display: flex;
+    background-color: #f8f5f2; /* Light cream background */
+    min-height: 100vh;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    width: 240px;
+    background-color: #2d2d2d;
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.admin-logo {
+    color: #8B0000;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #8B0000;
+    color: white;
+}
+
+/* --- Main Content --- */
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+    width: 100%;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+/* --- Stats Grid --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-top: 5px solid #8B0000;
+    text-align: center;
+}
+
+.stat-card h4 { color: #666; font-size: 0.9rem; text-transform: uppercase; }
+.stat-card p { font-size: 2rem; font-weight: bold; color: #333; margin-top: 10px; }
+
+/* --- Utility Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8B0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #5d0000;
+}
+/* --- Vertical Layout Sidebar Base --- */
+.sidebar {
+    width: 240px;
+    background-color: #2d2d2d;
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu {
+    list-style: none;
+    flex-grow: 1; /* Pushes the bottom vertical group down */
+}
+
+/* --- Dedicated Stacked Bottom Group --- */
+.logout-vertical-group {
+    margin-top: auto; /* Absolute anchor pushing the box to the base line */
+    border-top: 1px solid #444; /* Clean horizontal boundary separator */
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Flex layout mapping to position image above the text word string */
+.logout-vertical-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: transparent;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+/* Premium micro-interaction behavior on hover */
+.logout-vertical-link:hover {
+    background-color: #8B0000; /* Signature Bilas Red background */
+}
+
+/* Precise image icon metric constraints */
+.logout-img {
+    width: 25px; /* Small, balanced vector graphic footprint metric */
+    height: 24px;
+    object-fit: contain;
+    margin-bottom: 6px; /* Critical margin separation spacing above word */
+    transition: transform 0.2s ease;
+}
+
+.logout-vertical-link:hover .logout-img {
+    transform: scale(1.1); /* Minimal fluid pop response layout */
+}
+
+/* Word string label properties styling */
+.logout-text-label {
+    color: #ff9999; /* High contrast matching soft exit tint tone */
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logout-vertical-link:hover .logout-text-label {
+    color: #ffffff; /* Swaps to pure white when background lights red */
+}
+/* --- 1. Global Reset & Georgia Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body {
+    display: flex;
+    background-color: #f8f5f2; /* Light luxury cream background */
+    min-height: 100vh;
+}
+
+/* --- 2. Shared Components (Sidebar Layout) --- */
+.sidebar {
+    width: 240px;
+    background-color: #2d2d2d;
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.admin-logo {
+    color: #8B0000; /* Signature Bilas Red */
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+}
+
+.nav-menu {
+    list-style: none;
+    flex-grow: 1; /* Pushes the bottom logout block downward */
+}
+
+.nav-menu li {
+    width: 100%;
+}
+
+.nav-menu li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu li a:hover, 
+.nav-menu li a.active {
+    background-color: #8B0000;
+    color: white;
+}
+
+/* --- 3. Vertically Stacked Bottom Logout Group --- */
+.logout-vertical-group {
+    margin-top: auto; /* Locks container layout firmly to sidebar floor */
+    border-top: 1px solid #444;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.logout-vertical-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: transparent;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.logout-vertical-link:hover {
+    background-color: #8B0000;
+}
+
+.logout-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    transition: transform 0.2s ease;
+    filter: brightness(0) invert(1); /* Forces any image asset to output pure crisp white */
+}
+
+.logout-vertical-link:hover .logout-img {
+    transform: scale(1.1);
+}
+
+.logout-text-label {
+    color: #ff9999; /* soft exit pink tone */
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logout-vertical-link:hover .logout-text-label {
+    color: #ffffff;
+}
+
+/* --- 4. Main Workspace Panel Structure --- */
+.main-content {
+    margin-left: 240px; /* Aligns content area to clear the fixed sidebar width */
+    padding: 40px;
+    width: 100%;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.admin-header h3 {
+    color: #333;
+    font-size: 1.4rem;
+}
+
+.user-profile {
+    background: #e6dfd5;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* --- 5. Form & Layout Containers Flex --- */
+.form-and-table-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.admin-form-card, 
+.inventory-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.admin-form-card {
+    border-top: 4px solid #8B0000;
+}
+
+.admin-form-card h3, 
+.inventory-card h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group-full {
+    grid-column: span 2;
+}
+
+.admin-form-card label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.admin-form-card input, 
+.admin-form-card textarea, 
+.admin-form-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.admin-form-card input:focus, 
+.admin-form-card textarea:focus, 
+.admin-form-card select:focus {
+    outline: none;
+    border-color: #8B0000;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.1);
+}
+
+.admin-form-card textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+.save-btn {
+    grid-column: span 2;
+    background: #8B0000;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.save-btn:hover {
+    background: #2d2d2d;
+}
+
+/* --- 6. Inventory Data Table Layout rules --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #8B0000;
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+tr:hover td {
+    background-color: #fdfdfd;
+}
+
+.product-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.product-thumb-placeholder {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #aaa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f4f4f4;
+}
+
+.table-category {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.table-price {
+    font-weight: bold;
+    color: #8B0000;
+}
+
+.action-links {
+    text-align: center;
+}
+
+.action-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #8B0000;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.action-links a:hover {
+    background: #fdf2f2;
+}
+
+.action-links a.delete-link {
+    color: #666;
+}
+
+.action-links a.delete-link:hover {
+    background: #f4f4f4;
+    color: #222;
+}
+
+.divider-slash {
+    color: #ddd;
+}
+
+.empty-table-msg {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-style: italic;
+}
+
+/* --- 7. Responsive Breakpoint Layout rules --- */
+@media (max-width: 950px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .form-group-full { grid-column: span 1; }
+    .save-btn { grid-column: span 1; }
+}
+/* --- 12. Order Management Specific Layout Rules --- */
+.status-select-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-dropdown {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    background: #fafafa;
+}
+
+.update-inline-btn {
+    background: #8B0000;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.update-inline-btn:hover {
+    background: #2d2d2d;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.status-pending { background: #fff3cd; color: #856404; }
+.status-completed { background: #d4edda; color: #155724; }
+.status-cancelled { background: #f8d7da; color: #721c24; }
+
+/* Structural Table Alignment Classes */
+.col-id { width: 90px; text-align: center; }
+.col-center { text-align: center; }
+.col-actions { text-align: center; width: 280px; }
+
+.order-id-cell {
+    text-align: center; 
+    font-weight: bold; 
+    color: #666;
+}
+
+.customer-email-subtext {
+    font-size: 0.8rem; 
+    color: #888;
+}
+
+.date-cell {
+    font-size: 0.9rem; 
+    color: #555;
+}
+/* --- 13. Customer Directory Profile Layout Rules --- */
+.col-cust-id { 
+    width: 70px; 
+    text-align: center; 
+}
+
+.col-cust-date { 
+    width: 140px; 
+    text-align: left; 
+}
+
+.cust-id-cell {
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.cust-name {
+    color: #222;
+}
+
+.cust-email-link {
+    color: #8B0000; /* Links match signature Bilas red accents */
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+.cust-email-link:hover {
+    text-decoration: underline;
+}
+
+.cust-phone-cell {
+    font-family: monospace; /* Keeps standard mobile numbers looking uniform */
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.cust-address-cell {
+    max-width: 300px;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    word-wrap: break-word; /* Prevents long string layouts from stretching the grid boundaries */
+}
+
+.cust-date-cell {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Fallback visualization for optional empty layout entries */
+.no-data {
+    color: #bbb;
+    font-style: italic;
+    font-size: 0.85rem;
+}
